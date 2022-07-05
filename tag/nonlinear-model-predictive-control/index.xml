@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nonlinear model predictive control | Academic</title><link>https://eLearningHub.github.io/Static-Website-Hugo-Academic/tag/nonlinear-model-predictive-control/</link><atom:link href="https://eLearningHub.github.io/Static-Website-Hugo-Academic/tag/nonlinear-model-predictive-control/index.xml" rel="self" type="application/rss+xml"/><description>nonlinear model predictive control</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate><image><url>https://eLearningHub.github.io/Static-Website-Hugo-Academic/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>nonlinear model predictive control</title><link>https://eLearningHub.github.io/Static-Website-Hugo-Academic/tag/nonlinear-model-predictive-control/</link></image><item><title>Model based automatic code generation for nonlinear model predictive control</title><link>https://eLearningHub.github.io/Static-Website-Hugo-Academic/project/nmpc/</link><pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate><guid>https://eLearningHub.github.io/Static-Website-Hugo-Academic/project/nmpc/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>&lt;a href="https://github.com/SymbolicNMPC/NMPC-Toolkit" target="_blank" rel="noopener">NMPC Toolkit&lt;/a> implements a systematic workflow for model based automatic code generation for Nonlinear Model Predictive Control (NMPC). MapleSim, as an advanced high-level tool for physical modeling and simulation, and Maple, as an advanced symbolic analysis and synthesis tool, are natural building blocks of the proposed workflow for automatic code generation for NMPC.&lt;/p>
+&lt;p>The goal is to have a workflow with the following steps:&lt;/p>
+&lt;ul>
+&lt;li>Modeling: A physical model of the system is built by connecting components in MapleSim. MapleSim contains more than 550 built-in components from many different domains. If that is not enough, users can create their own custom components.&lt;/li>
+&lt;li>Extracting the equations: The dynamic equations of this model are then extracted into Maple. In general, automatically generated dynamic equations of a physical model are in the form of differential algebraic equations (DAE). Most NMPC algorithms assume that the equations are given in the form of ordinary differential equations (ODE). Maple with its powerful symbolic engine can be employed in the workflow to convert DAEs to ODEs. The conversion can be exact or an approximation in order to simplify the resulting ODEs.&lt;/li>
+&lt;li>Control design: The NMPC algorithm for the given the ODE equations is generated using Maple.&lt;/li>
+&lt;li>Generating Code: The resulting Maple code is then converted to C code automatically using the CodeGeneration package.&lt;/li>
+&lt;li>Simulating the Closed Loop System: The generated C code can be embedded in a MapleSim model as an External C Block. The closed loop system with the original DAE equations can then be simulated in MapleSim.&lt;/li>
+&lt;/ul>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;h3 id="from-maple-2017-or-later">From Maple 2017 or later&lt;/h3>
+&lt;ul>
+&lt;li>Open the MapleCloud pallette&lt;/li>
+&lt;li>Select &amp;ldquo;packages&amp;rdquo;&lt;/li>
+&lt;li>Find &amp;ldquo;NMPCToolkit&amp;rdquo; in the list&lt;/li>
+&lt;li>Right click and select &amp;ldquo;Install Package&amp;rdquo;&lt;/li>
+&lt;li>To open the workbook, right click and select &amp;ldquo;Open&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;h3 id="from-maplecloudhttpsmaplecloud">From &lt;a href="https://maple.cloud" target="_blank" rel="noopener">maple.cloud&lt;/a>&lt;/h3>
+&lt;ul>
+&lt;li>Go to &lt;a href="https://maple.cloud/#doc=5086116991467520" target="_blank" rel="noopener">here&lt;/a> on &lt;a href="https://maple.cloud" target="_blank" rel="noopener">maple.cloud&lt;/a>&lt;/li>
+&lt;li>Download the package&lt;/li>
+&lt;li>Execute the overview worksheet in Maple 2017 or later&lt;/li>
+&lt;/ul>
+&lt;h3 id="from-this-repository">From this repository&lt;/h3>
+&lt;ul>
+&lt;li>git clone &lt;a href="https://github.com/SymbolicNMPC/NMPC-Toolkit.git" target="_blank" rel="noopener">https://github.com/SymbolicNMPC/NMPC-Toolkit.git&lt;/a>&lt;/li>
+&lt;li>cd NMPC-Toolkit\src&lt;/li>
+&lt;li>build&lt;/li>
+&lt;li>cd ..\install&lt;/li>
+&lt;li>install&lt;/li>
+&lt;/ul></description></item></channel></rss>

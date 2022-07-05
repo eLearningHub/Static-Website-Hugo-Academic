@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://eLearningHub.github.io/Static-Website-Hugo-Academic/sitemap.xml
