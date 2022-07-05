@@ -23,7 +23,7 @@ jobs:
           hugo-version: '0.97.3'
           extended: true
       - name: Build
-        run: hugo --gc --minify -b "https://${{ env.GITHUB_REPOSITORY_OWNER }}.github.io/$(echo ${{ env.GITHUB_REPOSITORY }} | awk -F / '{print $2}')"
+        run: hugo --gc --minify -b "https://${{ github.repository_owner }}.github.io/$(echo ${{ github.repository }} | awk -F / '{print $2}')"
       - name: add a nojekyll file
         run: touch $GITHUB_WORKSPACE/public/.nojekyll
       - name: Deploy 🚀
