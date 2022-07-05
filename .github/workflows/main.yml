@@ -22,16 +22,8 @@ jobs:
         with:
           hugo-version: '0.97.3'
           extended: true
-      - name: List of the GitHub Actions environment variables on Windows
-        run: env          
-      - name: DEPLOY_URL
-        env:
-          DEPLOY_URL: "https://${GITHUB_REPOSITORY_OWNER}.github.io/$(echo ${GITHUB_REPOSITORY} | awk -F / '{print $2}')"
-        run: echo ${DEPLOY_URL}
       - name: Build
-        env:
-          DEPLOY_URL: "https://${GITHUB_REPOSITORY_OWNER}.github.io/$(echo ${GITHUB_REPOSITORY} | awk -F / '{print $2}')"
-        run: hugo --gc --minify -b ${DEPLOY_URL}
+        run: hugo --gc --minify -b "https://${{ env.GITHUB_REPOSITORY_OWNER }}.github.io/$(echo ${{ env.GITHUB_REPOSITORY }} | awk -F / '{print $2}')"
       - name: add a nojekyll file
         run: touch $GITHUB_WORKSPACE/public/.nojekyll
       - name: Deploy 🚀
