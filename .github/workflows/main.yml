@@ -22,7 +22,10 @@ jobs:
         with:
           hugo-version: '0.97.3'
           extended: true
-
+      - name: DEPLOY_URL
+        env:
+          DEPLOY_URL: "https://${GITHUB_REPOSITORY_OWNER}.github.io/$(echo ${GITHUB_REPOSITORY} | awk -F / '{print $2}')"
+        run: echo ${DEPLOY_URL}
       - name: Build
         env:
           DEPLOY_URL: "https://${GITHUB_REPOSITORY_OWNER}.github.io/$(echo ${GITHUB_REPOSITORY} | awk -F / '{print $2}')"
