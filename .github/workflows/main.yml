@@ -24,7 +24,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --gc --minify -b https://{{ repository_owner }}.github.io/$(echo {{ github.repository }} | awk -F / '{print $2}')
+        run: hugo --gc --minify -b https://${{ repository_owner }}.github.io/$(echo ${{ github.repository }} | awk -F / '{print $2}')
       - name: add a nojekyll file
         run: touch $GITHUB_WORKSPACE/public/.nojekyll
       - name: Deploy 🚀
