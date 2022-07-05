@@ -22,6 +22,8 @@ jobs:
         with:
           hugo-version: '0.97.3'
           extended: true
+      - name: List of the GitHub Actions environment variables on Windows
+        run: env          
       - name: DEPLOY_URL
         env:
           DEPLOY_URL: "https://${GITHUB_REPOSITORY_OWNER}.github.io/$(echo ${GITHUB_REPOSITORY} | awk -F / '{print $2}')"
