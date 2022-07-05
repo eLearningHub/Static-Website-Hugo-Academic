@@ -12,3 +12,10 @@ jobs:
         with:
           feed-url: https://wowchemy.com/blog/index.xml
           readme-section: news
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: www # The folder the action should deploy.
+          clean: true
+          single-commit: true
